@@ -1,0 +1,57 @@
+ALGORITHM STRING_TEST
+VAR 
+str,c:string[100];
+i,j,k,:integer;
+BEGIN
+for( c <>".") do
+Write("insert your character");
+   Read(c);
+str:=str+c;
+end_for
+str:=str.uppercase;
+i,k:=0;
+j:=1
+FOR i FROM 0 TO str1.length-1 STEP 1 DO
+    while str[i]<>(".") do 
+          if str[i]=(" ")
+            THEN j:=j+1;
+             ELSE 
+               if ( str[i]=(".") AND j=0) then j:=1;
+
+          if str[i]in("a,e,y,u,i,o") then k:=k+1;
+end_for
+
+
+ALGORITHM sum_distinct
+VAR
+set1,set2:ARRAY_OF integer[];
+i,j,k:integer;
+BEGIN
+write("insert set1");
+read(set1);
+write("insert set2");
+read(set2);
+sum,i,j,k:=0
+ FOR i FROM 0 TO set1.length-1 STEP 1 DO
+        FOR j FROM 0 TO set2.length-1 STEP 1 DO
+            if set1[i]=set2[j]
+            THEN BREAK;
+                ELSE 
+                   if (set1[i]<>set2[j] AND j=set2.length-1)
+                      THEN sum=sum+set2[i];
+end_for
+j:=0
+FOR k FROM 0 TO set2.length-1 STEP 1 DO
+        FOR j FROM 0 TO set1.length-1 STEP 1 DO
+            if set2[k]=set1[j]
+            THEN BREAK;
+                ELSE 
+                   if (set2[k]<>set1[j] AND j=set1.length-1)
+                      THEN sum=sum+set2[k];
+end_for
+
+
+            
+
+
+
